@@ -8,7 +8,7 @@ import pickle
 
 
 # This filepath should be passed as an argument
-def train_model(dataset_filepath, trained_model_path):
+def train_model(dataset_filepath, trained_model_path, **kwargs):
     dataset = pd.read_csv(dataset_filepath)
 
     attributes = dataset.iloc[:, 0:4].values
