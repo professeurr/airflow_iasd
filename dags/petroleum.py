@@ -1,15 +1,11 @@
-import time
-import datetime
-from tempfile import NamedTemporaryFile
-
-import timedelta
-from builtins import range
-from model import train_model
+from datetime import datetime, timedelta
 
 import airflow.hooks.S3_hook
 
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
+
+from model import train_model
 
 
 data_s3_path = ' https://iasd-data-in-the-cloud.s3.eu-west-3.amazonaws.com/petrol_consumption.csv'
@@ -18,13 +14,13 @@ trained_model_local_path = './model.pickle'
 
 
 args = {
-    'owner': 'KodjoKlouvi',
-    'start_date': datetime(2020, 6, 10),
-    'retry_delay': timedelta(minutes=5)
+    'owner': 'KodjoKlouvi'
 }
 
 dag = DAG(
-    dag_id='ml_pipeline_example',
+    dag_id='_ml_petroleum_pipeline',
+    start_date = datetime(2020, 6, 5),
+    # retry_delay = timedelta(minutes=5),
     default_args=args,
     schedule_interval=None,
     tags=['ml', 'pipeline', 'example']
