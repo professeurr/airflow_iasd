@@ -18,3 +18,6 @@ All steps are completed.
 * petroleum.py contains Airflow DAGS pipeline implementation
 * EC2 machine is created and syncs with this repo.
 * S3 is populated with the model dump
+
+
+Reference: https://github.com/faouzelfassi/pipelining/blob/master/README.md
