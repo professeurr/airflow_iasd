@@ -1,4 +1,4 @@
-# ML Pipelining
+# ML Pipelining using Airflow
 
 The main goal of this project is to implement an end-to-end machine learning pipeline using Airflow in following steps:
 * download dataset from AWS S3 bucket
