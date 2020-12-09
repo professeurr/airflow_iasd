@@ -13,7 +13,7 @@ The main goal of this project is to implement an end-to-end machine learning pip
 * run the task every hours within Airflow (scheduler) push the result (trained model) into AWS S3
 
 # Implementation status
-All steps are completed.
+All steps above are completed.
 * `dags/model.py` contains te ML model work
 * `dags/petroleum.py` contains Airflow DAGS pipeline implementation
 * EC2 machine is created and syncs with this Github repo.
